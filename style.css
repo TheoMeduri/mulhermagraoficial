@@ -264,6 +264,7 @@ body {
   }
 
   .main {
+    width: 100%:
     justify-content: center;
     align-items: center;
     display: flex;
@@ -275,3 +276,4 @@ body {
     padding: 12px 25px;
   }
 }
+
