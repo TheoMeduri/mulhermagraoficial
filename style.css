@@ -236,9 +236,7 @@ body {
   .photos {
     grid-template-columns: 1fr; /* 1 coluna em mobile */
   }
-}
-
-@media (max-width: 400px) {
+}@media (max-width: 400px) {
   body {
     padding: 10px;
   }
@@ -248,42 +246,42 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    text-align: center;
     display: flex;
   }
 
   .title {
     font-size: 1.5rem;
     margin-top: -60px;
-    width: 100%; /* garante que ocupe toda largura */
+    width: 100%;
+    max-width: 100%;
+    text-align: center; /* forçar centralização */
   }
 
   .desc {
     font-size: 1rem;
-    max-width: 100%;
     width: 100%;
+    max-width: 100%;
+    text-align: center; /* forçar centralização */
+    margin-top: 20px;
   }
 
   .main {
     width: 100%;
     justify-content: center;
     align-items: center;
-    display: flex;
     flex-direction: column-reverse;
+    display: flex;
   }
 
   .btn {
     font-size: 1rem;
     padding: 12px 25px;
   }
-  
-  /* Também centralizar a title2 */
+
   .title2 {
     text-align: center;
     width: 100%;
-    max-width: 320px;
+    max-width: 100%; /* para garantir que centralize */
     margin: 0 auto;
   }
 }
-
-
