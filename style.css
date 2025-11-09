@@ -1,0 +1,277 @@
+/* --- variáveis e reset --- */
+@import url('https://fonts.googleapis.com/css2?family=Stack+Sans+Text:wght@200..700&display=swap');
+
+:root {
+  --back: #fff;
+  --text: #100f0f;
+  --destaque: #D95D77;
+  --btn-back: #D95D77;
+  --btn-text: #fff;
+  --btn-hover-back: #bf4f66;
+  --stripe-color: rgba(0, 0, 0, 0.03); /* cor sutil das listras */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Stack Sans Text", sans-serif;
+}
+
+body {
+  background-color: var(--back);
+  background-image: repeating-linear-gradient(
+    135deg,
+    var(--stripe-color) 1px,
+    var(--stripe-color) 2px,
+    transparent 2px,
+    transparent 20px
+  );
+  color: var(--text);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.main {
+  margin-top: 20px;
+  display: flex;
+  gap: 30px;
+  max-width: 900px;
+  width: 100%;
+  /* Para dispositivos maiores */
+  flex-wrap: nowrap;
+}
+
+.text {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-top: 120px;
+  max-width: 480px;
+  width: 100%;
+}
+
+.title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  width: 100%;
+  text-align: left;
+}
+
+.title2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  width: 480px;
+}
+
+.destaque {
+  color: var(--destaque);
+}
+
+.desc {
+  font-size: 1.2rem;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  width: 100%;
+  max-width: 490px;
+  text-align: left;
+  color: var(--text);
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--btn-back);
+  color: var(--btn-text);
+  text-decoration: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 30px;
+  width: max-content;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--btn-hover-back);
+}
+
+.img-main img {
+  border-radius: 12px;
+  object-fit: cover;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Estilo para a seção de resultados/fotos */
+.results {
+  margin-top: 60px;
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-direction: column;
+}
+
+.results .title {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.photos {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+  gap: 20px;
+}
+
+.photo {
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: var(--stripe-color);
+}
+
+.photo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.photo .img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.photo .img img {
+  width: 100%;
+  border-radius: 10px;
+  height: auto; /* Para manter a proporção */
+}
+
+.photo .desc-photo {
+  font-size: 0.95rem;
+  margin-top: 10px;
+}
+
+/* Responsividade */
+
+@media (max-width: 900px) {
+  .main {
+    gap: 20px;
+    max-width: 700px;
+  }
+  
+  .text {
+    margin-top: 80px;
+    max-width: 400px;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .desc {
+    max-width: 400px;
+    font-size: 1.1rem;
+  }
+
+  .photos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .main {
+    flex-direction: column-reverse;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .title {
+    margin-top: -80px;
+    width: 100%;
+    max-width: 320px;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .desc {
+    width: 100%;
+    max-width: 320px;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .main .img-main {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    margin: 0;
+  }
+
+  .main .img-main img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+  }
+
+  .title2 {
+    font-size: 1.5rem;
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+  }
+
+  .photos {
+    grid-template-columns: 1fr; /* 1 coluna em mobile */
+  }
+}
+
+@media (max-width: 400px) {
+  body {
+    padding: 10px;
+  }
+
+  .text {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    margin-top: -60px;
+  }
+
+  .desc {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .main {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 12px 25px;
+  }
+}
