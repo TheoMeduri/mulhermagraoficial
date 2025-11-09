@@ -256,15 +256,19 @@ body {
   .title {
     font-size: 1.5rem;
     margin-top: -60px;
+    text-align: center; /* <-- centraliza o texto */
+    width: 100%; /* garante que ocupe toda largura */
   }
 
   .desc {
     font-size: 1rem;
     max-width: 100%;
+    text-align: center; /* <-- centraliza o texto */
+    width: 100%;
   }
 
   .main {
-    width: 100%:
+    width: 100%;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -275,5 +279,12 @@ body {
     font-size: 1rem;
     padding: 12px 25px;
   }
+  
+  /* Também centralizar a title2 */
+  .title2 {
+    text-align: center;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
 }
-
