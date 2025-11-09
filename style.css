@@ -203,6 +203,7 @@ body {
     margin-top: -80px;
     width: 100%;
     max-width: 320px;
+    text-align: center;
     font-size: 1.8rem;
   }
 
@@ -210,6 +211,7 @@ body {
     width: 100%;
     max-width: 320px;
     font-size: 1.1rem;
+    text-align: center;
     margin-top: 20px;
   }
 
@@ -253,6 +255,7 @@ body {
 
   .text {
     align-items: center;
+    justify-content: center;
     text-align: center;
 
     .title, .desc {
@@ -272,3 +275,4 @@ body {
     margin: 0 auto;
   }
 }
+
